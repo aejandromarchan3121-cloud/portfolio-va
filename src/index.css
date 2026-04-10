@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-blue: #00d2ff;
+  --color-cyber-purple: #9245ff;
+  --color-dark-bg: #0a0b10;
+  --color-card-bg: #161b22;
+}
+
+body {
+  @apply bg-dark-bg text-slate-200;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  /* Fondo con un toque sutil de profundidad */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 210, 255, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(146, 69, 255, 0.05) 0px, transparent 50%);
+}
+
+/* Para que las secciones no se amontonen en móviles */
+section {
+  @apply overflow-hidden;
+}
+
+/* Animación suave para las tarjetas */
+.hover-card {
+  @apply transition-all duration-300 hover:-translate-y-2;
+}
